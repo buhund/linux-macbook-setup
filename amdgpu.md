@@ -15,7 +15,7 @@ My setup is a "use entire disk" installation and UEFI (no Grub during doot). The
 
 **Before beninning, I would urge you to backup your files, in case something goes awry. At least, that's my gut reaction when doing something with boot or kernel stuff. Better safe than sorry** ¯\\\_(ツ)\_/¯
 
-Use `sudo lshw -c video` to check what driver you're using
+Use `sudo lshw -c video` to check what driver you're using:
 
     *-display                 
     description: VGA compatible controller
@@ -31,7 +31,6 @@ Use `sudo lshw -c video` to check what driver you're using
     resources: irq:56 memory:80000000-8fffffff memory:b0c00000-b0c3ffff ioport:3000(size=256) memory:b0c40000-b0c5ffff
 
 Line 11 (next to last) show that I'm currently running amdgpu (previously it was showing radeon).
-
 
 [Install Kernelstub](https://github.com/isantop/kernelstub)
 
