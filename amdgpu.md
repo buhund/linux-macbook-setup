@@ -9,14 +9,29 @@ Tech Specs: [MacBook Pro (Retina, 15-inch, Mid 2015)](https://support.apple.com/
 * RAM: 16 GB
 
 
-I found the solution to enable Vulkan on my Macbook Pro running Linux (Kubuntu 19.10), via a (Level1Techs forum post)[https://forum.level1techs.com/t/vulkan-with-amds-gcn-1-0/131427/32].
+I found the solution to enable Vulkan on my Macbook Pro running Linux (Kubuntu 19.10), via a [Level1Techs forum post](https://forum.level1techs.com/t/vulkan-with-amds-gcn-1-0/131427/32).
 
 My setup is a "use entire disk" installation and UEFI (no Grub during doot). Therefore, it's not straightforward to add boot parameters, such as enabling AMDGPU (and thus be able to use Vulkan) instead of running Radeon.
 
 
-Install Kernelstub: https://github.com/isantop/kernelstub
+Use `sudo lshw -c video` to check what driver you're using
+  *-display                 
+       description: VGA compatible controller
+       product: Venus XT [Radeon HD 8870M / R9 M270X/M370X]
+       vendor: Advanced Micro Devices, Inc. [AMD/ATI]
+       physical id: 0
+       bus info: pci@0000:01:00.0
+       version: 83
+       width: 64 bits
+       clock: 33MHz
+       capabilities: pm pciexpress msi vga_controller bus_master cap_list rom
+       **configuration: driver=amdgpu latency=0**
+       resources: irq:56 memory:80000000-8fffffff memory:b0c00000-b0c3ffff ioport:3000(size=256) memory:b0c40000-b0c5ffff
 
-  You can either build it yourself, or grab a .deb package from the (release page)[https://github.com/isantop/kernelstub/releases]
+
+[Install Kernelstub](https://github.com/isantop/kernelstub)
+
+* You can either build it yourself, or grab a .deb package from the [release page](https://github.com/isantop/kernelstub/releases).
 
 
 
