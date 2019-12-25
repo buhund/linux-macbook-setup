@@ -1,4 +1,6 @@
-# How to enable AMDGPU (and thus Vulkan), mid-2015 rMPB15
+# Enable AMDGPU (and use Vulkan), mid-2015 rMPB 15"
+
+### Using kernelstub to edit your boot and kernel parameters to use AMDGPU and Vulkan
 
 Tech Specs: [MacBook Pro (Retina, 15-inch, Mid 2015)](https://support.apple.com/kb/SP719)
 * MacBook Pro (Retina, 15-inch, Mid 2015)
@@ -13,7 +15,11 @@ I found the solution to enable Vulkan on my Macbook Pro running Linux (Kubuntu 1
 
 My setup is a "use entire disk" installation and UEFI (no Grub during doot). Therefore, it's apparantly not straightforward to add boot parameters, such as enabling AMDGPU (and thus be able to use Vulkan) instead of running Radeon.
 
-**Before beninning, I would urge you to backup your files, in case something goes awry. At least, that's my gut reaction when doing something with boot or kernel stuff. Better safe than sorry** ¯\\\_(ツ)\_/¯
+_____
+
+**Before beginning, I would urge you to take a backup of your files, in case something goes awry. At least, that's my gut reaction when doing something with which touches on anything with "boot" or "kernel". Better safe than sorry** ¯\\\_(ツ)\_/¯
+
+_____
 
 Use `sudo lshw -c video` to check what driver you're using:
 
@@ -32,11 +38,11 @@ Use `sudo lshw -c video` to check what driver you're using:
 
 Line 11 (next to last) show that I'm currently running amdgpu (previously it was showing radeon).
 
-[Install Kernelstub](https://github.com/isantop/kernelstub)
+Install [Kernelstub](https://github.com/isantop/kernelstub):
 
 * You can either build it yourself (as detailed on the kernelstub github page), or grab a .deb package from the [release page](https://github.com/isantop/kernelstub/releases).
 
-When running `kernelstub amdgpu.si_support=1`, as per the L1T thread, it will ask for sudo and path to kernel- and initrd image.
+When running `kernelstub amdgpu.si_support=1`, as per the L1T thread, it will ask for sudo, and path to kernel and initrd image.
 
 * Kernel image: `/boot/vmlinuz`
 * Initrd image: `/boot/initrd.img`
