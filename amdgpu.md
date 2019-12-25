@@ -34,11 +34,14 @@ Line 11 (next to last) show that I'm currently running amdgpu (previously it was
 
 [Install Kernelstub](https://github.com/isantop/kernelstub)
 
-* You can either build it yourself, or grab a .deb package from the [release page](https://github.com/isantop/kernelstub/releases).
+* You can either build it yourself (as detailed on the kernelstub github page), or grab a .deb package from the [release page](https://github.com/isantop/kernelstub/releases).
 
+When running `kernelstub amdgpu.si_support=1`, as per the L1T thread, it will ask for sudo and path to kernel- and initrd image.
 
+* Kernel image: `/boot/vmlinuz`
+* Initrd image: `/boot/initrd.img`
 
-To change boot parameters, use the following commands. Input a line, press enter, input the next, und so weiter.
+After some trial and error, I found the commands supplied under to work. Copy, paste and run each line, one at a time.
 
 `sudo kernelstub --initrd-path /boot/initrd.img --kernel-path /boot/vmlinuz -a amdgpu.si_support=1`
 
@@ -48,6 +51,6 @@ To change boot parameters, use the following commands. Input a line, press enter
 
 `sudo kernelstub --initrd-path /boot/initrd.img --kernel-path /boot/vmlinuz -a radeon.cik_support=0`
 
-**Reboot.** When I rebooted, it somehow crapped out when starting over, ending up with just a black screen. It might have been just me being impatient, but I just helt down the power button, forcing a shutdown, then turning it on again when the Apple-light had died.
+**Reboot.** When I rebooted, it somehow crapped out when starting over, ending up with just a black screen. It might have been just me being impatient, but I just held down the power button, forcing a shutdown, then turning it on again when the Apple-light had died.
 
 Run `sudo lshw -c video` again to see if it worked.
