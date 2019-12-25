@@ -13,7 +13,7 @@ I found the solution to enable Vulkan on my Macbook Pro running Linux (Kubuntu 1
 
 My setup is a "use entire disk" installation and UEFI (no Grub during doot). Therefore, it's not straightforward to add boot parameters, such as enabling AMDGPU (and thus be able to use Vulkan) instead of running Radeon.
 
-**Before beninning, I would urge you to backup your files, in case something goes awry. At least, that's my gut reaction when doing something with boot or kernel stuff. Better safe than sorry :) **
+**Before beninning, I would urge you to backup your files, in case something goes awry. At least, that's my gut reaction when doing something with boot or kernel stuff. Better safe than sorry ¯\_(ツ)_/¯**
 
 Use `sudo lshw -c video` to check what driver you're using
 
