@@ -11,7 +11,7 @@ Tech Specs: [MacBook Pro (Retina, 15-inch, Mid 2015)](https://support.apple.com/
 
 I found the solution to enable Vulkan on my Macbook Pro running Linux (Kubuntu 19.10), via a [Level1Techs forum post](https://forum.level1techs.com/t/vulkan-with-amds-gcn-1-0/131427/32).
 
-My setup is a "use entire disk" installation and UEFI (no Grub during doot). Therefore, it's not straightforward to add boot parameters, such as enabling AMDGPU (and thus be able to use Vulkan) instead of running Radeon.
+My setup is a "use entire disk" installation and UEFI (no Grub during doot). Therefore, it's apparantly not straightforward to add boot parameters, such as enabling AMDGPU (and thus be able to use Vulkan) instead of running Radeon.
 
 **Before beninning, I would urge you to backup your files, in case something goes awry. At least, that's my gut reaction when doing something with boot or kernel stuff. Better safe than sorry** ¯\\\_(ツ)\_/¯
 
