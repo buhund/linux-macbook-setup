@@ -11,5 +11,3 @@ Tech specs: [MacBook Pro (Retina, 15-inch, Mid 2015)](https://support.apple.com/
 * RAM: 16 GB
 
 Distro of choice: [Kubuntu](https://kubuntu.org/)
-
-
