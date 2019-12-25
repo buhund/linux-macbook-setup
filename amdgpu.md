@@ -1,16 +1,11 @@
 # How to enable AMDGPU (and thus Vulkan), mid-2015 rMPB15
 
-
+Tech Specs: [MacBook Pro (Retina, 15-inch, Mid 2015)](https://support.apple.com/kb/SP719)
 * MacBook Pro (Retina, 15-inch, Mid 2015)
 * Model Identifier: MacBookPro11,4
 * Part Number: MJLQ2xx/A
-* Tech Specs: [MacBook Pro (Retina, 15-inch, Mid 2015)](https://support.apple.com/kb/SP719)
-
-* OS: Ubuntu 19.10 (Kubuntu)
-* KERNEL: 5.4.6-050406-generic
 * CPU: Intel Core i7-4870HQ @ 2.50GHz
 * GPU: AMD Radeon R9 M370X
-* GPU DRIVER: 4.5 Mesa 19.3.1 - kisak-mesa PPA
 * RAM: 16 GB
 
 
