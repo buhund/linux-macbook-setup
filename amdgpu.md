@@ -17,7 +17,7 @@ My setup is a "use entire disk" installation and UEFI (no Grub during doot). The
 
 _____
 
-**Before beginning, I would urge you to take a backup of your files, in case something goes awry. At least, that's my gut reaction when doing something with which touches on anything with "boot" or "kernel". Better safe than sorry** ¯\\\_(ツ)\_/¯
+**Before starting, I would urge you to take a backup of your files, in case something goes awry. At least, that's my gut reaction when doing something with which touches on anything with "boot" or "kernel". Better safe than sorry** ¯\\\_(ツ)\_/¯
 
 _____
 
