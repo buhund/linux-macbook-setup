@@ -107,3 +107,10 @@ Hope this helps!
 I’m now running Vulkan on my GCN 1.0 HD7970.
 
 Again thank you for all this good info in this thread!
+
+____
+
+# Commands to check which driver is in use
+
+* `lspci -nnk | grep -iA2 vga`
+* `sudo lshw -c video`
