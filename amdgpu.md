@@ -63,8 +63,11 @@ Run `sudo lshw -c video` again to see if it worked.
 
 ____
 
-## Option 2: Updating grub to load amdgpu instead of radeon drivers
 Update 2020-07-07
+
+## Option 2: Updating grub to load amdgpu instead of radeon drivers
+
+**Kubuntu 20.04**
 
 ### [Level1Techs](https://forum.level1techs.com/t/vulkan-with-amds-gcn-1-0/131427/30) quotes
 
@@ -116,7 +119,7 @@ ____
 * `lspci -nnk | grep -iA2 vga`
 * `sudo lshw -c video`
 * `lspci -nnk | grep -i vga -A3 | grep 'in use'`
-* `glxinfo | grep "OpenGL version
+* `glxinfo | grep "OpenGL version`
 
 
 ____
