@@ -137,6 +137,7 @@ Sea Islands GPUs
  
 `GRUB_CMDLINE_LINUX_DEFAULT=“radeon.si_support=0 amdgpu.si_support=1 radeon.cik_support=0 amdgpu.cik_support=1”`
 
+Then run `sudo update-grub` to, well, update grub.
  
  One can also blacklist the radeon driver:
  
