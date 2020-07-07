@@ -131,7 +131,9 @@ Sea Islands GPUs
 
 `radeon.si_support=0 amdgpu.si_support=1`
  
- I.e. for etc/default/grub with blacklisted radeon driver:
+ Add the boot parameters to grub in `etc/default/grub`:
+ 
+ Change the line `GRUB_CMDLINE_LINUX_DEFAULT=`to
  
 `GRUB_CMDLINE_LINUX_DEFAULT=“radeon.si_support=0 amdgpu.si_support=1 radeon.cik_support=0 amdgpu.cik_support=1”`
 
