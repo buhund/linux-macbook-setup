@@ -60,3 +60,48 @@ After some trial and error, I found the commands supplied under to work. Copy, p
 **Reboot.** When I rebooted, it somehow crapped out when starting over, ending up with just a black screen. It might have been just me being impatient, but I just held down the power button, forcing a shutdown, then turning it on again when the Apple-light had died.
 
 Run `sudo lshw -c video` again to see if it worked.
+
+____
+
+## [Level1Techs](https://forum.level1techs.com/t/vulkan-with-amds-gcn-1-0/131427/30) quotes
+
+### imrazor
+
+In order to get amdgpu support on my GCN 1.1 laptop I had to put the following line in /etc/default/grub:
+
+    GRUB_CMDLINE_LINUX_DEFAULT=“radeon.si_support=0 amdgpu.si_support=1 radeon.cik_support=0 amdgpu.cik_support=1 rd.driver.blacklist=radeon quiet”
+
+If you’re still using an apt or Debian based distro, you’ll then want to run “sudo update-grub” to update grub AND your intial ramdisk.
+
+Note that both the amdgpu AND radeon drivers will still load, but you can confirm that the amdgpu driver has taken ownership of your GPU (look for “Kernel driver in use:”) by running “lspci -knn” and examining which kernel module is listed for your GPU.
+
+Another kernel option that might be helpful to add to /etc/default/grub is:
+
+    radeon.modeset=0
+
+### znaque
+
+Hello guys. Thank you for all this awesome information. It really helped me understand the problem.
+
+Sadly you didn’t find a solution to this problem, but I did!!
+
+You are right that Pop_OS is based on Ubuntu, but it actually DOESN’T use grub at all.
+
+So the kernel flags you’re using `amdgpu.si_support=1 radeon.si_support=0 amdgpu.cik_support=1 radeon.cik_support=0` aren’t recognized by Pop_OS.
+
+To properly load them you have to do the following in your command line:
+
+kernelstub -a KERNELFLAG for all the 4 kernel flags. So to do the desired task do the following (enter after every line):
+
+   kernelstub -a amdgpu.si_support=1
+   kernelstub -a radeon.si_support=0
+   kernelstub -a amdgpu.cik_support=1
+   kernelstub -a radeon.cik_support=0
+
+Then restart.
+
+Hope this helps!
+
+I’m now running Vulkan on my GCN 1.0 HD7970.
+
+Again thank you for all this good info in this thread!
