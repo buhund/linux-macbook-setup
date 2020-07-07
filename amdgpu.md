@@ -63,6 +63,8 @@ Run `sudo lshw -c video` again to see if it worked.
 
 ____
 
+Update 2020-07-07
+
 ## [Level1Techs](https://forum.level1techs.com/t/vulkan-with-amds-gcn-1-0/131427/30) quotes
 
 ### imrazor
