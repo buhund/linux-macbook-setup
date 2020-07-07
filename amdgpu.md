@@ -66,7 +66,7 @@ ____
 ## Option 2: Updating grub to load amdgpu instead of radeon drivers
 Update 2020-07-07
 
-### [Level1Te chs](https://forum.level1techs.com/t/vulkan-with-amds-gcn-1-0/131427/30) quotes
+### [Level1Techs](https://forum.level1techs.com/t/vulkan-with-amds-gcn-1-0/131427/30) quotes
 
 #### imrazor
 
