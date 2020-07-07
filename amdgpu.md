@@ -119,7 +119,7 @@ ____
 * `lspci -nnk | grep -iA2 vga`
 * `sudo lshw -c video`
 * `lspci -nnk | grep -i vga -A3 | grep 'in use'`
-* `glxinfo | grep "OpenGL version`
+* `glxinfo | grep "OpenGL version"`
 
 
 ____
