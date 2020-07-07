@@ -2,7 +2,7 @@
 
 ### Using kernelstub to edit your boot and kernel parameters to use AMDGPU and Vulkan
 
-Tech specs: [MacBook Pro (Retina, 15-inch, Mid 2015)](https://support.apple.com/kb/SP719)
+Tech specs for [MacBook Pro (Retina, 15-inch, Mid 2015)](https://support.apple.com/kb/SP719):
 * MacBook Pro (Retina, 15-inch, Mid 2015)
 * Model Identifier: MacBookPro11,4
 * Part Number: MJLQ2xx/A
