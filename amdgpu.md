@@ -110,7 +110,7 @@ Again thank you for all this good info in this thread!
 
 ____
 
-# Commands to check which driver is in use
+##  Commands to check which driver is in use
 
 * `lspci -nnk | grep -iA2 vga`
 * `sudo lshw -c video`
@@ -120,19 +120,19 @@ ____
 
 ____
 
-GPU codes for grub:
+## GPU codes for grub:
 
 Caribbean Islands GPUs
 
-   radeon.cik_support=0 amdgpu.cik_support=1
+`radeon.cik_support=0 amdgpu.cik_support=1`
 
 Sea Islands GPUs
 
-   radeon.si_support=0 amdgpu.si_support=1
+`radeon.si_support=0 amdgpu.si_support=1`
  
  I.e. for etc/default/grub with blacklisted radeon driver:
-    GRUB_CMDLINE_LINUX_DEFAULT=“radeon.si_support=0 amdgpu.si_support=1 radeon.cik_support=0 amdgpu.cik_support=1”
+`GRUB_CMDLINE_LINUX_DEFAULT=“radeon.si_support=0 amdgpu.si_support=1 radeon.cik_support=0 amdgpu.cik_support=1”`
 
  
  One can also blacklist the radeon driver:
-    GRUB_CMDLINE_LINUX_DEFAULT=“radeon.si_support=0 amdgpu.si_support=1 radeon.cik_support=0 amdgpu.cik_support=1 rd.driver.blacklist=radeon quiet”
+`GRUB_CMDLINE_LINUX_DEFAULT=“radeon.si_support=0 amdgpu.si_support=1 radeon.cik_support=0 amdgpu.cik_support=1 rd.driver.blacklist=radeon quiet”`
