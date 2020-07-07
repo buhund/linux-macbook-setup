@@ -1,6 +1,6 @@
 # Enable AMDGPU (and use Vulkan), mid-2015 rMPB 15"
 
-### Using kernelstub to edit your boot and kernel parameters to use AMDGPU and Vulkan
+## Option 1: Using kernelstub to edit your boot and kernel parameters to use AMDGPU and Vulkan
 
 Tech specs for [MacBook Pro (Retina, 15-inch, Mid 2015)](https://support.apple.com/kb/SP719):
 * MacBook Pro (Retina, 15-inch, Mid 2015)
@@ -63,11 +63,12 @@ Run `sudo lshw -c video` again to see if it worked.
 
 ____
 
+## Option 2: Updating grub to load amdgpu instead of radeon drivers
 Update 2020-07-07
 
-## [Level1Techs](https://forum.level1techs.com/t/vulkan-with-amds-gcn-1-0/131427/30) quotes
+### [Level1Te chs](https://forum.level1techs.com/t/vulkan-with-amds-gcn-1-0/131427/30) quotes
 
-### imrazor
+#### imrazor
 
 In order to get amdgpu support on my GCN 1.1 laptop I had to put the following line in /etc/default/grub:
 
@@ -81,7 +82,7 @@ Another kernel option that might be helpful to add to /etc/default/grub is:
 
     radeon.modeset=0
 
-### znaque
+#### znaque
 
 Hello guys. Thank you for all this awesome information. It really helped me understand the problem.
 
@@ -110,7 +111,7 @@ Again thank you for all this good info in this thread!
 
 ____
 
-##  Commands to check which driver is in use
+###  Commands to check which driver is in use
 
 * `lspci -nnk | grep -iA2 vga`
 * `sudo lshw -c video`
@@ -120,7 +121,7 @@ ____
 
 ____
 
-## GPU codes for grub:
+### GPU codes for grub:
 
 Caribbean Islands GPUs
 
