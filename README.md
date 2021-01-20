@@ -15,10 +15,11 @@ Distro of choice: [Kubuntu](https://kubuntu.org/)
 
 
 ### Fixing AirPods 2 dropping out
+
 From the Wizards of Arch (Link) https://wiki.archlinux.org/index.php/PulseAudio/Troubleshooting#Choppy/distorted_sound
 
-Choppy/distorted sound
 
+Choppy/distorted sound
 This can result from an incorrectly set sample rate. Try the following setting:
 
 Open the conig file for Pule Audio:
